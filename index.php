@@ -8,29 +8,29 @@
     <title>Shop</title>
 </head>
 <body>
- <?php
-   $Good = array
+ 
+<?php  $Good = array
                  (
                 'id' => 1,
                 'name' => "newproduct 1",
                 'price' => "19.99",
-                'src_img' => "images/1.jpg",
+                'image' => "images/1.jpg",
                 'currency' => "USD"
                 ); 
- ?>
-<div class="item ">
-    <img src="images/1.jpg width="300" height="150"/><br>
-    Name: <?php $Good['id']; ?> 
-    Price: '.$row['price'].'<br>
-    <a href="checkout.php?id='.$row['id'].'" class="btn btn-warning">BUY</a><br>
-</div>
 
-
-
-
-<?php
-echo "<h2>Hello!!!</h2>";
-?>
-
+echo ' 
+<style type="text/css">html, body {height: 100%; background:#2d9783;}</style>
+<div class="container h-100 d-flex justify-content-center">
+    <div class="h-100 row align-items-center">
+        <div class="col">
+            <h1><center>Newproduct #1</center></h1>
+            <center><img src="'.$Good['image'].'" width="300" height="300"/></center><br>
+            <h2><center>Name: '.$Good['name'].'</center></h2><br>
+            <h2><center>Price: '.$Good['price'].'</center></h2><br>
+            <center><a href="checkout.php?id='.$Good['id'].'" class="btn btn-warning">BUY</a></center><br>
+        </div>
+    </div>
+</div>            
+'; ?>
 </body>
 </html>
